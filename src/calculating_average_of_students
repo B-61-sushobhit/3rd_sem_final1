@@ -1,0 +1,42 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+ class Student {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("enter the names of a students");
+        String a=sc.next();
+
+        int maths,english,science;
+        System.out.println("maths marks of "+a);
+        maths=sc.nextInt();
+        System.out.println("english marks of "+a);
+        english=sc.nextInt();
+        System.out.println("science marks of "+a);
+        science=sc.nextInt();
+        int average1=(maths+english+science)/3;
+        System.out.println("average marks of "+a);
+        System.out.println(average1);
+
+        System.out.println("enter the names of another students");
+        String b=sc.next();
+        System.out.println("maths marks of "+b);
+        maths=sc.nextInt();
+        System.out.println("english marks of "+b);
+        english=sc.nextInt();
+        System.out.println("science marks of "+b);
+        science=sc.nextInt();
+        try{
+            int average2 = (maths+english+science)/3;
+            System.out.println("average marks of " + b);
+            System.out.println(average2);
+        }
+        catch(NumberFormatException obj)
+        {
+            System.out.println("NumberFormatException or unexcepted termination");
+        }
+        catch(InputMismatchException obj)
+        {
+            System.out.println("InputMismatchException or unexcepted termination");
+        }
+    }
+}
