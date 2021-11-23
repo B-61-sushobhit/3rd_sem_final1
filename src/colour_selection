@@ -1,0 +1,18 @@
+import java.util.Random;
+class Main123 implements Runnable{
+    public static void main(String[] args) {
+       Main123 main123=new Main123();
+        Thread t1=new Thread(main123);
+        t1.start();
+    }
+
+    @Override
+    public void run() {
+        Random random =new Random();
+        String colour[]={"white","blue","black","green","red","yellow"};
+        int index;
+        while((index= random.nextInt(6))!=4){
+            System.out.println(colour[index]);
+        }
+    }
+}
