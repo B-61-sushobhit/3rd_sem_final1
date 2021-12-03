@@ -1,0 +1,17 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+public class neww {
+    public static <Stirng> void main(String[] args) {
+        Stirng str= (Stirng) "Naresh naveen rahul nikhil Narayan Rajesh";
+        Pattern p=Pattern.compile("[N|n][A-Za-z]{0,}");
+        int ctr=0;
+        Matcher m=p.matcher((CharSequence) str);
+        while(m.find()){
+        System.out.println(m.start()+"-----"+m.end()+"------"+m.group());
+        ctr++;
+        }
+        System.out.println("No. of counts= "+ctr);
+
+
+        }
+}
